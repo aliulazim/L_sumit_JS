@@ -27,6 +27,29 @@ isLeapYear(2528);
 
 //  How many vowel have a sentence
 
+// 1st wyea
+
+const vowels1 = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+
+function countVowel(sentence) {
+    let count = 0;
+    const letters = Array.from(sentence);
+    letters.forEach(function (value) {
+        if (vowels1.includes(value)) {
+            count++;
+        }
+    })
+    return count;
+}
+
+console.log(`Total vowels =  ${countVowel('I i I I Love Bangladesh')}`);
+
+
+
+// 2nd wyea
+
+
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 const uppercased = vowels.map(arr => arr.toUpperCase());
 
