@@ -1,3 +1,12 @@
+// How to check 1-6 randomly
+
+
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomNum(1, 6));
+
 // 2. How to arrange class student names alphabetically.
 
 const students = ["sumit", "saad", "daiyan", "akash"];
@@ -29,8 +38,8 @@ isLeapYear(2528);
 
 // 1st wyea
 
+/*
 const vowels1 = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-
 
 function countVowel(sentence) {
     let count = 0;
@@ -44,6 +53,7 @@ function countVowel(sentence) {
 }
 
 console.log(`Total vowels =  ${countVowel('I i I I Love Bangladesh')}`);
+ */
 
 
 
@@ -71,5 +81,29 @@ function countVowel(sentence) {
 
 console.log(`Total vowels =  ${countVowel('I i I I Love Bangladesh')}`);
 
+
+//  Found a duplicate value in an array
+
+const numbers = [5, 1, 2, 5, 4, 6, 4, 7, 9, 11, 11, 6];
+
+const duplicate = numbers.filter(function (value, index, array) {
+    return array.indexOf(value) !== index
+    
+});
+
+console.log(`Duplicate Valur: ${duplicate}`);
+
+
+//  Found a Unique Numbers in an array
+
+const numbers1 = [5, 1, 2, 5, 4, 6, 4, 7, 9, 11, 11, 6];
+console.log(numbers1);
+
+const uniqueNumbers = numbers.filter(function (value, index, array) {
+    return array.indexOf(value) === index
+    
+});
+
+console.log(`Unique Numbers: ${uniqueNumbers}`);
 
 
